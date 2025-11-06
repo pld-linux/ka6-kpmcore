@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kpmcore
 Summary:	KPMcore
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	99ba7811140670f3cbc8896cd0bd0b23
+# Source0-md5:	dc35d056d463a7127d0864f70ac01fe2
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.12.3
@@ -89,10 +89,10 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libkpmcore.so.1?
-%attr(755,root,root) %{_libdir}/libkpmcore.so.*.*
+%{_libdir}/libkpmcore.so.*.*
 %dir %{_libdir}/qt6/plugins/kpmcore
-%attr(755,root,root) %{_libdir}/qt6/plugins/kpmcore/pmdummybackendplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kpmcore/pmsfdiskbackendplugin.so
+%{_libdir}/qt6/plugins/kpmcore/pmdummybackendplugin.so
+%{_libdir}/qt6/plugins/kpmcore/pmsfdiskbackendplugin.so
 %attr(755,root,root) %{_prefix}/libexec/kpmcore_externalcommand
 %{_datadir}/dbus-1/system-services/org.kde.kpmcore.helperinterface.service
 %{_datadir}/dbus-1/system.d/org.kde.kpmcore.helperinterface.conf
