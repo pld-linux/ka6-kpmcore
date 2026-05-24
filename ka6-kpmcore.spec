@@ -43,6 +43,13 @@ storage devices on a system:
 - partition tables on a device
 - filesystems within a partition
 
+%description -l pl.UTF-8
+KPMcore jest biblioteką do odczytywania i manipulowania wszystkimi
+aspektami urządzeń magazynowania danych:
+- surowymi dyskami urządzeń
+- tablicą partycji
+- systemem plików na partycji
+
 %package devel
 Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
