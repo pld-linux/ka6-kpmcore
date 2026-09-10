@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.08.0
+%define		kdeappsver	26.08.1
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kpmcore
 Summary:	KPMcore
 Name:		ka6-%{kaname}
-Version:	26.08.0
+Version:	26.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	31eba990962a82aa78495f68563350b8
+# Source0-md5:	ee4c7b5a587215c752dd2b61f516524b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.12.3
